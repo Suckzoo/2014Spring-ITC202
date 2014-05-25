@@ -5,9 +5,14 @@ from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render
 from django.http import Http404
+from models import Report
 
 def showReport(request):
-    return render(request, 'emergency.html')
+    report_list = Report.objects.all()
+    ctx = {}
+    ctx['reports']=report_list
+    print report_list[0].name
+    return render(request, 'emergency.html',ctx)
     #return HttpResponse("Hello, world!")
 
 def report(request):
