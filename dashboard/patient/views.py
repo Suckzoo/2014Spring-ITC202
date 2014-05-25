@@ -10,5 +10,5 @@ from django.http import Http404
 def overview(request):
     return render(request, 'patient.html')
 
-def question(report):
+def question(request):
     return render(request, 'patient-question.html')
