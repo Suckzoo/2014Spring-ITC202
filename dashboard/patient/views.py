@@ -11,5 +11,4 @@ def overview(request):
     return render(request, 'patient.html')
 
 def question(report):
-    return 1
-#    return render(request, 'question.html')
+    return render(request, 'patient-question.html')
