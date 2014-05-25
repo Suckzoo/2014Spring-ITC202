@@ -21,6 +21,8 @@
     <script type="text/javascript">
         var ctx;
         function loading() {
+            var resolution = screen.height;
+            $("#question-wrapper").css("height",resolution*0.45 + "px");
             ctx = document.getelementById("chart").getContext("2d");
         }
         window.onload = loading;
@@ -59,21 +61,23 @@
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">Q&A</h1> 
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">What doctor says :</h3>
+                <h1 class="page-header">Q&A</h1>
+                <div id="question-wrapper">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">What doctor says :</h3>
+                        </div>
+                        <div class="panel-body">
+                            yeah baby I like that!
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        yeah baby I like that!
-                    </div>
-                </div>
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">What you asked :</h3>
-                    </div>
-                    <div class="panel-body">
-                        you like that ang?
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">What you asked :</h3>
+                        </div>
+                        <div class="panel-body">
+                            you like that ang?
+                        </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
