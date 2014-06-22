@@ -48,21 +48,21 @@ void loop() {
     xValue=analogRead(5);
     yValue=analogRead(4);
     zValue=analogRead(3);
-    Serial.println("accelbegin");
+    Serial.println("AB");
     Serial.print(xValue);
-    Serial.print(", ");
+    Serial.print(",");
     Serial.print(yValue);
-    Serial.print(", ");
+    Serial.print(",");
     Serial.println(zValue);
-    Serial.println("accelend");
+    Serial.println("AE");
     while(1) {
       if(brain.update()) {
-        Serial.println("brainerrorbegin");
+        Serial.println("BEB");
         Serial.println(brain.readErrors());
-        Serial.println("brainerrorend");
-        Serial.println("brainvaluebegin");
+        Serial.println("BEE");
+        Serial.println("BVB");
         Serial.println(brain.readCSV());
-        Serial.println("brainvalueend");
+        Serial.println("BVE");
         break;
       }
     }
